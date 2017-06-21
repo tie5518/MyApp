@@ -23,10 +23,13 @@ public class app extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+                    mWebView.loadUrl("http://10.0.2.2/apps");
                     return true;
                 case R.id.navigation_dashboard:
+                    mWebView.loadUrl("http://10.0.2.2/apps/index.php/2017-06-21-02-10-16");
                     return true;
                 case R.id.navigation_notifications:
+                    mWebView.loadUrl("http://10.0.2.2/apps/index.php/2017-06-21-02-11-12");
                     return true;
             }
             return false;
@@ -42,7 +45,7 @@ public class app extends AppCompatActivity {
         mWebView=(WebView)findViewById(R.id.webview);
         mWebView.setWebViewClient(mWebViewClient);
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.loadUrl("https://www.google.com");
+        mWebView.loadUrl("http://10.0.2.2/apps ");
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
